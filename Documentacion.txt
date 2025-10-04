@@ -1,0 +1,107 @@
+***************************
+* HTML Documentation      *
+***************************
+
+File: index.html
+
+This file defines the structure and content of your website.
+
+*** Header Section (<header id="mainheader">) ***
+- Navigation Bar (<nav id="navbar">): The top menu with the "TAKAX" logo and links to various page sections (Inicio, Características, Testimonios, Contacto).
+- Showcase (<div id="showcase">): The main hero section. It contains a large headline, a descriptive paragraph, and a call-to-action button to contact you.
+
+*** Features Section (<section id="features">) ***
+- Features Cards (<div class="features-card">): A container for four individual cards, each with an icon and a description of a key feature.
+
+*** Testimonial Section (<section id="testimonial">) ***
+- Displays a client quote to build trust. It includes a testimonial paragraph and the client's name.
+
+*** Contact Section (<section id="contact">) ***
+- Contains a contact form for users to get in touch. The form includes fields for name, email, and a message.
+
+*** Footer Section (<footer id="mainfooter">) ***
+- Footer Grid (<div class="footer-grid">): A modern, four-column layout. It includes brand information, navigation links, contact details, and a newsletter subscription form.
+- Copyright (<div class="footer-bottom">): A notice at the very bottom of the page that displays the copyright information.
+
+***************************
+* CSS Documentation       *
+***************************
+
+File: style.css
+
+This file controls the visual appearance and layout of your website.
+
+*** General Styling and Utilities ***
+- @import: Imports the 'Montserrat' font from Google Fonts.
+- Reset (*): Clears default browser styling for a clean, consistent look.
+- Basic Elements (body, h1, p, a): Sets fundamental styles like font family, sizes, and link decorations.
+- Utility Classes:
+  - .container: Centers content and sets a max-width for a consistent layout.
+  - .text-yellow: Applies the signature yellow color (#f5b637).
+  - .btn: Defines general button styling.
+  - .form-control: Styles input fields and textareas.
+
+*** Component Styling ***
+- #navbar: Styles the navigation bar with a dark blue background and positions the logo and links.
+- #showcase: Styles the hero section, including its background image and the positioning of the text content.
+- #features, #testimonial, #contact: These sections have specific padding and layout styles to organize their content.
+- #mainfooter: Uses CSS Grid to create the four-column footer layout. It also styles social media icons and the newsletter form.
+
+*** Responsive Design ***
+- @media (max-width: 768px): This media query is crucial for mobile responsiveness. On screens 768px or smaller, the layout adjusts:
+  - The footer grid collapses into a single column.
+  - Content becomes centered for easier viewing on smaller devices.
+
+***************************
+* Documentación HTML      *
+***************************
+
+Archivo: index.html
+
+Este archivo define la estructura y el contenido de tu sitio web.
+
+*** Sección del Encabezado (<header id="mainheader">) ***
+- Barra de Navegación (<nav id="navbar">): El menú superior con el logo "TAKAX" y enlaces a varias secciones de la página (Inicio, Características, Testimonios, Contacto).
+- Showcase (<div id="showcase">): La sección principal o "hero". Contiene un titular grande, un párrafo descriptivo y un botón de llamada a la acción para contactar.
+
+*** Sección de Características (<section id="features">) ***
+- Tarjetas de Características (<div class="features-card">): Un contenedor para cuatro tarjetas individuales, cada una con un ícono y una descripción de una característica clave.
+
+*** Sección de Testimonios (<section id="testimonial">) ***
+- Muestra una cita de un cliente para generar confianza. Incluye un párrafo con el testimonio y el nombre del cliente.
+
+*** Sección de Contacto (<section id="contact">) ***
+- Contiene un formulario de contacto para que los usuarios se comuniquen contigo. El formulario incluye campos para el nombre, correo electrónico y mensaje.
+
+*** Pie de Página (<footer id="mainfooter">) ***
+- Cuadrícula del Pie de Página (<div class="footer-grid">): Un diseño moderno de cuatro columnas. Incluye información de la marca, enlaces de navegación, datos de contacto y un formulario para suscribirse al boletín.
+- Copyright (<div class="footer-bottom">): Un aviso al final de la página que muestra la información de los derechos de autor.
+
+***************************
+* Documentación CSS       *
+***************************
+
+Archivo: style.css
+
+Este archivo controla el diseño visual y la maquetación de tu sitio web.
+
+*** Estilos Generales y de Utilidad ***
+- @import: Importa la fuente 'Montserrat' de Google Fonts.
+- Reset (*): Limpia los estilos predeterminados del navegador para una apariencia consistente.
+- Elementos Básicos (body, h1, p, a): Establece estilos fundamentales como la familia de fuentes, tamaños y la decoración de los enlaces.
+- Clases de Utilidad:
+  - .container: Centra el contenido y establece un ancho máximo para un diseño limpio.
+  - .text-yellow: Aplica el color amarillo característico (#f5b637).
+  - .btn: Define el estilo general de los botones.
+  - .form-control: Estiliza los campos de entrada y de texto para los formularios.
+
+*** Estilos de Componentes ***
+- #navbar: Estiliza la barra de navegación con un fondo azul oscuro y posiciona el logo y los enlaces.
+- #showcase: Estiliza la sección principal, incluyendo su imagen de fondo y el posicionamiento del texto.
+- #features, #testimonial, #contact: Estas secciones tienen un relleno y estilos específicos para organizar su contenido.
+- #mainfooter: Utiliza CSS Grid para crear la maquetación del pie de página de cuatro columnas. También estiliza los íconos de redes sociales y el formulario de suscripción.
+
+*** Diseño Adaptable (Responsive) ***
+- @media (max-width: 768px): Esta consulta de medios es esencial para la adaptabilidad móvil. En pantallas de 768px o menos, la maquetación se ajusta automáticamente:
+  - La cuadrícula del pie de página colapsa a una sola columna.
+  - El contenido se centra para facilitar la visualización en dispositivos más pequeños.

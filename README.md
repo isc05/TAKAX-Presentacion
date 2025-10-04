@@ -1,11 +1,5 @@
 # TAKAX-Presentacion
-    _______            
-  /\       \           
- /()\   ()  \          
-/    \_______\         
-\    /()     /         
- \()/   ()  /          
-  \/_____()/
+
 
 Project Goal
 To provide an efficient and accessible service through a system that connects people and businesses with recycling centers. This will facilitate the proper disposal of waste materials like plastic, paper, and cardboard, while also promoting waste reduction, environmental awareness, and the creation of sustainable economic value for the community.
@@ -20,22 +14,3 @@ Our mission is to make it easy for businesses to connect with recycling centers 
 
 Vision
 To become a leading system for promoting a sustainable society in the Atlixco community and its surrounding regions. We will do this by efficiently connecting businesses with recycling centers and fostering a culture of environmental responsibility. We aspire to transform waste management and consumption habits, generating economic value and contributing to the care of our planet for future generations.
-
-
-                                              _________
-                                             |=========|
-                    __[]__         _          \_______/
-+================+ /______\     __(_)__    ()  \_____/   ()
- `-+ +-----+---+ | |------|    /_______\  /__\  |   | +======+
-   | |     |   | +-+------+-.  |=======| <____> |   | ||    ||
-   | |     |   | |o          \_|___  __|__//\\__|___|_+======+
-   | +=========+ |o                                     o||=+
-   | *         * |o                                     o||||
-   |    --%--    |o~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~o||=+
-   +=====================================+-----------+====+
-       |==/ ------ \=====/ ------ \===%--||o        o||____
-         // \  L_/__\___//_\__L_/__\_/ %=||o~~~~~~~~o||===\\_____
-        ||__ /.  ___________ .  ______/ +==============+      \  \_
-        ||   \__/   || ||   \__/   ||     //--\\  //--\\\\   \ \ \\\_
-         \\ / || \ //   \\ / || \ //     (( <> ))(( <> ))\\_\_\_\_\\\\
-          \========/     \========/       \____/  \____/  `-----------+

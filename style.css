@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* MAIN STYLING */
+
+body,
+html{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 2.5rem;
+}
+
+h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    text-align: center;
+}
+p{
+    font-size: 1rem;
+    margin: 10px 0;
+    line-height: 1.7em;
+}
+
+a{
+    text-decoration: none;
+}
+
+/* Utility classes */
+.container{
+    margin: auto;
+    max-width: 1300px;
+    overflow: auto;
+    padding: 0 20px;
+}
+
+.large {
+    font-size: 1.25rem;
+}
+
+.display-1 {
+    font-size: 72px;
+    font-weight: 400;
+}
+
+.text-yellow{
+    color: #f5b637;
+}
+
+.btn{
+    display: inline-block;
+    font-size: 15px;
+    padding: 12px 23px;
+    cursor: pointer;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 4px;
+}
+
+.btn-light{
+    background: #f5b637;
+    color: #fff;
+    border: none;
+}
+
+.btn-100{
+    width: 100%;
+}
+
+form label{
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+form .form-group{
+    margin-bottom: 16px;
+}
+
+form .form-control{
+    display: block;
+    width: 100%;
+    padding: 7px 12px;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #ededed;
+    border: 1px solid #ededed;
+    border-radius: 4px;
+}
+
+/* Navbar */
+
+#navbar{
+    background: #0a0b45;
+    color: #fff;
+    overflow: hidden;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    height: 12vh;
+}
+
+#navbar a{
+    color: #fff;
+}
+
+#navbar .logo{
+    float: left;
+    padding-top: 16px;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+#navbar ul{
+    list-style: none;
+    float: right;
+}
+#navbar ul li{
+    float: left;
+}
+
+#navbar ul li a{
+    display: block;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Showcase */
+#showcase{
+    background: url(img/background-02.jpg) ;
+    /* background: linear-gradient(to right, #e000ea, #3b00ee); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color:#000;
+    /* height: 88vh; */
+    padding-top: 160px;
+}
+
+.showcase-title{
+    float: left;
+    width: 50%;
+    padding-right: 10px;
+}
+
+.showcase-title p{
+    padding: 20px;
+}
+
+.showcase-img{
+    float: right;
+    width: 50%;
+    padding: 30px;
+
+}
+.showcase-img img{
+    width: 100%;
+}
+
+/* Features */
+
+#features{
+    padding: 90px 120px;
+}
+
+.features-card{
+    padding-top: 70px ;
+}
+
+.card{
+    float: left;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Testimonial */
+#testimonial{
+    background: #0a0b45;
+    color: #fff;
+    padding: 90px 120px;
+    text-align: center;
+}
+
+#tesimonial h3{
+    padding-bottom: 50px;
+}
+
+#testimonial p{
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* contact */
+
+#contact {
+    padding: 90px 120px;
+}
+#contact form {
+    padding-top: 90px;
+    width: 70%;
+    margin: 0 auto;
+}
+
+/* Footer */
+
+#mainfooter {
+  background: #0a0b45;
+  color: #fff;
+  padding: 50px 0 20px 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.footer-section h3 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.footer-section ul {
+  list-style: none;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #f5b637;
+}
+
+.social-links img {
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
+  filter: invert(1);
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover img {
+  transform: translateY(-5px);
+}
+
+.footer-section form input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 30px;
+  padding-top: 20px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+
+  .footer-section:last-child {
+    margin-bottom: 0;
+  }
+
+  .footer-section ul li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+
+  .footer-section .logo {
+    font-size: 2rem;
+  }
+}
