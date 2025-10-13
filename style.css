@@ -5,7 +5,7 @@
     --primary-color: #C0EBA6;
     --secondary-color: #16610E;
     --dark-color: #000;
-    --line-color: #093FB4;
+    --line-color: #093FB4;/*dark blue alternative #0a0b45*/
     --background-color: #E0F4FF;
     --button-color: #E5446D;
     --highlighter-color: #FF7832;
@@ -21,6 +21,7 @@
 body,
 html{
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
 }
 
 h1{
@@ -61,7 +62,7 @@ a{
 }
 
 .text-yellow{
-    color: #f5b637;
+    color: var(--highlighter-color);
 }
 
 .btn{
@@ -75,8 +76,8 @@ a{
 }
 
 .btn-light{
-    background: #f5b637;
-    color: #fff;
+    background: var(--button-color);
+    color: var(--background-color);
     border: none;
 }
 
@@ -100,24 +101,29 @@ form .form-control{
     font-size: 1rem;
     line-height: 1.5;
     color: #495057;
-    background-color: #ededed;
-    border: 1px solid #ededed;
+    background-color: var(--primary-color);
+    border: 1px solid var(--secondary-color);
     border-radius: 4px;
+}
+form #message{
+    resize: none; /* fixed size*/
 }
 
 /* Navbar */
 
 #navbar{
-    background: #0a0b45;
-    color: #fff;
+    background: var(--secondary-color);
+    color: var(--background-color);
     overflow: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
     height: 12vh;
+    width: 100vw;
+    position: fixed;
 }
 
 #navbar a{
-    color: #fff;
+    color: var(--background-color);
 }
 
 #navbar .logo{
@@ -150,7 +156,7 @@ form .form-control{
     background-size: cover;
     background-position: center;
     height: 100vh;
-    color:#000;
+    color:var(--dark-color);
     /* height: 88vh; */
     padding-top: 160px;
 }
@@ -194,8 +200,8 @@ form .form-control{
 
 /* Testimonial */
 #testimonial{
-    background: #0a0b45;
-    color: #fff;
+    background: var(--secondary-color);
+    color: var(--background-color);
     padding: 90px 120px;
     text-align: center;
 }
@@ -223,8 +229,8 @@ form .form-control{
 /* Footer */
 
 #mainfooter {
-  background: #0a0b45;
-  color: #fff;
+  background: var(--secondary-color);
+  color: var(--background-color);
   padding: 50px 0 20px 0;
 }
 
@@ -245,14 +251,14 @@ form .form-control{
 }
 
 .footer-section ul li a {
-  color: #fff;
+  color: var(--background-color);
   display: block;
   margin-bottom: 10px;
   transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: #f5b637;
+  color: var(--highlighter-color);
 }
 
 .social-links img {
@@ -273,11 +279,12 @@ form .form-control{
   border: none;
   border-radius: 4px;
   margin-bottom: 10px;
+  background-color: var(--background-color);
 }
 
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--line-color);
   margin-top: 30px;
   padding-top: 20px;
 }
