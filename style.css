@@ -126,6 +126,11 @@ form #message{
     color: var(--background-color);
 }
 
+#navbar #logo .logo-takax{
+    width: 65px;
+    height: auto;
+    float: left;
+}
 #navbar .logo{
     float: left;
     padding-top: 16px;
@@ -133,7 +138,6 @@ form #message{
     text-transform: uppercase;
     font-weight: 300;
 }
-
 #navbar ul{
     list-style: none;
     float: right;
