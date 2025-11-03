@@ -221,6 +221,110 @@ form #message{
     margin: 0 auto;
 }
 
+/* Benefits Section */
+#benefits {
+    padding: 70px 0;
+    background-color: var(--white);
+}
+
+#benefits h4 {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 60px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: none;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.benefit-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 35px 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.benefit-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 25px;
+    font-weight: 600;
+    text-align: center;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.benefit-card h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 3px;
+    
+}
+
+.benefit-card ul {
+    list-style: none;
+    flex-grow: 1;
+    padding: 0;
+}
+
+.benefit-card li {
+    margin-bottom: 18px;
+    padding-left: 15px;
+    position: relative;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.benefit-card li:before {
+    content: "•";
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+}
+
+.benefit-card strong {
+    color: var(--dark-color);
+    font-weight: 700;
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+
+/* Responsive for Benefits */
+@media (max-width: 768px) {
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #benefits {
+        padding: 60px 20px;
+    }
+    #benefits h4 {
+    font-size: 2rem;
+    }
+}
+
 /* contact */
 
 #contact {
