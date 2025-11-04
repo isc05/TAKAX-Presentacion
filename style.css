@@ -7,7 +7,9 @@
     --dark-color: #000;
     --line-color: #093FB4;/*dark blue alternative #0a0b45*/
     --background-color: #E0F4FF;
+    --box-color:#BDE3F8;
     --button-color: #E5446D;
+    --hover-button:#e61146;
     --highlighter-color: #FF7832;
 }
 *{
@@ -22,10 +24,15 @@ body,
 html{
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-color);
+    scroll-behavior: smooth;
 }
 
 h1{
     font-size: 2.5rem;
+}
+
+h3{
+    font-size: 2em;
 }
 
 h4{
@@ -34,6 +41,9 @@ h4{
     text-transform: uppercase;
     text-align: center;
 }
+
+ul{list-style: none;}
+
 p{
     font-size: 1.5rem;
     margin: 10px 0;
@@ -75,6 +85,10 @@ a{
     font-weight: bold;
     letter-spacing: 1px;
     border-radius: 4px;
+}
+
+.btn:hover{
+    background-color: var(--hover-button);
 }
 
 .btn-light{
@@ -185,6 +199,50 @@ form #message{
 }
 .showcase-img img{
     width: 100%;
+}
+
+/* Caracteristicas */
+
+#caracteristicas{
+    background-color:  var(--background-color);
+    text-align: center;
+}
+
+#caracteristicas .container{
+    padding: 100px 60px;
+}
+
+#caracteristicas #t-center{
+    text-align: center;
+}
+
+#caracteristicas h2{
+    margin-top: 0;
+    font-size: 2.5em;
+    color: var(--secondary-color);
+}
+
+#caracteristicas p{
+    font-size: 1.2em;
+    text-align: left;
+}
+
+#caracteristicas .soluciones{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.box-c{
+    background-color: var(--box-color);
+    border-radius: 30px;
+    overflow: auto;
+    margin: 0.5em;
+    padding: 2em;
+}
+
+.box-c h3{
+    color: var(--secondary-color);
 }
 
 /* Features */
@@ -606,4 +664,15 @@ form #message{
   .footer-section .logo {
     font-size: 2rem;
   }
+
+  #caracteristicas .soluciones{
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    #caracteristicas .soluciones{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
 }
