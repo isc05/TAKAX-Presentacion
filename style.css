@@ -8,6 +8,7 @@
     --line-color: #093FB4;/*dark blue alternative #0a0b45*/
     --background-color: #E0F4FF;
     --box-color:#BDE3F8;
+    --box-color2:#D4FFCF;
     --button-color: #E5446D;
     --hover-button:#e61146;
     --highlighter-color: #FF7832;
@@ -31,6 +32,12 @@ h1{
     font-size: 2.5rem;
 }
 
+h2{
+    font-size: 2.5em;
+    color: var(--secondary-color);
+    text-align: center;
+}
+
 h3{
     font-size: 2em;
 }
@@ -38,14 +45,13 @@ h3{
 h4{
     font-size: 1.5rem;
     font-weight: 400;
-    text-transform: uppercase;
     text-align: center;
 }
 
 ul{list-style: none;}
 
 p{
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin: 10px 0;
     line-height: 1.7em;
     text-align: justify;
@@ -201,6 +207,39 @@ form #message{
     width: 100%;
 }
 
+/*Problema*/
+
+#problema .container{
+    padding: 60px 60px;
+    max-width: 1150px;
+}
+
+#problema h2{
+    margin-bottom: 35px;
+}
+
+#problema p{
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+#problema .center-p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#problema .box-p{
+    background-color: var(--box-color2);
+    border-radius: 30px;
+    overflow: auto;
+    margin: 0.5em;
+    padding: 2em 4em;
+}
+
 /* Caracteristicas */
 
 #caracteristicas{
@@ -209,7 +248,7 @@ form #message{
 }
 
 #caracteristicas .container{
-    padding: 100px 60px;
+    padding: 20px 60px 60px 60px;
 }
 
 #caracteristicas #t-center{
@@ -218,8 +257,6 @@ form #message{
 
 #caracteristicas h2{
     margin-top: 0;
-    font-size: 2.5em;
-    color: var(--secondary-color);
 }
 
 #caracteristicas p{
@@ -478,6 +515,7 @@ form #message{
     line-height: 1.2;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: var(--background-color);
 }
 
 .cta-description {
@@ -643,6 +681,29 @@ form #message{
 /* Responsive */
 
 @media (max-width: 768px) {
+
+  h2{
+    font-size: 2em;
+  }
+  
+  h3{
+    font-size: 1.6em;
+  }
+
+    p{
+    font-size: 1.2em;
+  }
+
+  #problema .container{
+    padding: 60px 30px;
+    max-width: 1150px;
+  }
+
+  #problema .box-p{
+    margin: 0.3em;
+    padding: 2em 1.2em;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
