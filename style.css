@@ -9,6 +9,7 @@
     --background-color: #E0F4FF;
     --box-color:#BDE3F8;
     --box-color2:#D4FFCF;
+    --seccion-interactiva: #B0D8EE;
     --button-color: #E5446D;
     --hover-button:#e61146;
     --highlighter-color: #FF7832;
@@ -282,7 +283,7 @@ form #message{
     color: var(--secondary-color);
 }
 
-/* Features */
+/* Features 
 
 #features{
     padding: 90px 120px;
@@ -297,18 +298,54 @@ form #message{
     width: 25%;
     text-align: center;
     padding: 20px;
-}
+}*/
 
-/* Testimonial */
-#testimonial{
-    background: var(--secondary-color);
+/* Sección Interactiva */
+#interactivo{
+    background: var(--seccion-interactiva);
     color: var(--background-color);
-    padding: 90px 120px;
     text-align: center;
 }
 
-#tesimonial h3{
-    padding-bottom: 50px;
+#interactivo .container{
+    max-width: 1000px;
+    padding: 50px 10px;
+}
+
+#interactivo h2{
+    margin-bottom: 50px;
+}
+
+#interactivo .act-box{
+    display: grid;
+    place-items: center;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.box-i{
+    display: grid;
+    place-items: center;
+    border-radius: 60px;
+    background-position: center center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+}
+
+.box-i:first-child{
+    background-image: url("/img/Quiz.png");
+
+}
+
+.box-i:nth-child(2){
+    background-image: url("/img/Memorama.png");
+}
+
+.name-box{
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    background-color: #000;
 }
 
 #testimonial p{
@@ -704,6 +741,19 @@ form #message{
     padding: 2em 1.2em;
   }
 
+  /*Sección interactiva-responsive*/
+  #interactivo .act-box{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  #interactivo h3{
+    font-size: 2em;
+  }
+
+  /*Footer*/
+
   .footer-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -727,8 +777,11 @@ form #message{
   }
 
   #caracteristicas .soluciones{
-        grid-template-columns: 1fr;
-    }
+    grid-template-columns: 1fr;
+  }
+  #caracteristicas .container{
+    padding: 20px 20px 60px 20px;
+  }
 }
 
 
