@@ -19,6 +19,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (gameType === 'memorama') {
             iniciarMemorama();
         }
+        if( gameType === 'quiz'){
+            iniciarQuiz();
+        }
     }
     function closeGame() {
         if (!gameContainer) return;
@@ -211,4 +214,112 @@ function mezclarArray(array) {
         let j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
     }
+}
+/** Funcionamiento y generación del Quiz **/
+function iniciarQuiz() {
+    console.log("Iniciando Quiz...");
+    // Definición de preguntas (3 preguntas) — puedes modificar texto/ops aquí
+    const preguntas = [
+        {
+            pregunta: '¿Cuál de estas opciones es un beneficio del reciclaje?',
+            opciones: [
+                { text: 'Incrementa residuos tóxicos', correct: false },
+                { text: 'Aumenta el vertido en vertederos', correct: false },
+                { text: 'Reduce la contaminación', correct: true }
+            ]
+        },
+        {
+            pregunta: '¿Qué material es comúnmente reciclable?',
+            opciones: [
+                { text: 'Tierra de jardinería', correct: false },
+                { text: 'Vidrio', correct: true },
+                { text: 'Restos de comida en grandes cantidades', correct: false }
+            ]
+        },
+        {
+            pregunta: '¿Qué se logra con una economía circular?',
+            opciones: [
+                { text: 'Reutilizar recursos', correct: true },
+                { text: 'Mayor extracción de recursos', correct: false },
+                { text: 'Aumentar el consumo sin controles', correct: false }
+            ]
+        }
+    ];
+
+    // Estado del quiz
+    let currentQuestion = 0;
+    let score = 0;
+
+    // Limpiar tablero y renderizar la primera pregunta
+    function renderQuestion(index) {
+        const q = preguntas[index];
+        if (!q) return;
+        tablero.innerHTML = '';
+
+        const container = document.createElement('div');
+        container.className = 'quiz-container';
+
+        const title = document.createElement('h3');
+        title.className = 'quiz-question';
+        title.textContent = `Pregunta ${index + 1} de ${preguntas.length}: ${q.pregunta}`;
+        container.appendChild(title);
+
+        const opts = document.createElement('div');
+        opts.className = 'quiz-options';
+
+        q.opciones.forEach((op, i) => {
+            const btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'quiz-option';
+            btn.dataset.correct = op.correct ? '1' : '0';
+            btn.dataset.index = i;
+            btn.textContent = op.text;
+            opts.appendChild(btn);
+        });
+
+        container.appendChild(opts);
+
+        // Opcional: zona de ayuda / estado
+        const status = document.createElement('div');
+        status.className = 'quiz-status';
+        container.appendChild(status);
+
+        tablero.appendChild(container);
+    }
+
+    // Delegación de eventos para opciones del quiz
+    function onTableroClick(e) {
+        const opt = e.target.closest('.quiz-option');
+        if (!opt) return;
+
+        // Evitar múltiples clicks
+        const allOpts = tablero.querySelectorAll('.quiz-option');
+        allOpts.forEach(b => b.disabled = true);
+
+        const correct = opt.dataset.correct === '1';
+        if (correct) score += 1;
+
+        // Marcar visualmente
+        opt.classList.add(correct ? 'correct' : 'incorrect');
+
+        // Avanzar a la siguiente pregunta tras breve pausa
+        setTimeout(() => {
+            currentQuestion += 1;
+            if (currentQuestion < preguntas.length) {
+                renderQuestion(currentQuestion);
+            } else {
+                mostrarSplashScreen(true, `¡Has completado el quiz! Obtuviste ${score} de ${preguntas.length} respuestas correctas.`);
+                currentQuestion = 0;
+                score = 0;
+            }
+        }, 1000);
+    }
+
+    // Asignar listener de delegación (se remueve al cerrar porque limpiamos tablero)
+    tablero.addEventListener('click', onTableroClick);
+
+    // Inicializar
+    currentQuestion = 0;
+    score = 0;
+    renderQuestion(currentQuestion);
 }

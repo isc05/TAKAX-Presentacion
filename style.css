@@ -143,6 +143,7 @@ form #message{
     height: 12vh;
     width: 100vw;
     position: fixed;
+    z-index: 1000;
 }
 
 #navbar a{
@@ -714,11 +715,25 @@ form #message{
 
 .footer-bottom {
   text-align: center;
-  border-top: 1px solid var(--line-color);
+  border-top: 1px solid var(--primary-color);
   margin-top: 30px;
   padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.footer-bottom p{
+    width: max-content;
+    display: inline-flex;
+}
+.vitadev-logo {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    background: url('img/VitaDevs-Logo.png') no-repeat center center;
+    background-size: cover;
+}
 /* Responsive */
 
 @media (max-width: 768px) {

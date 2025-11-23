@@ -17,7 +17,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.98);
-    background-color: rgb(220, 220, 220);
+    background-color: var(--primary-color);
     overflow: hidden;
     display: flex;
     justify-content: center;
@@ -91,7 +91,6 @@
     /* Centra las cartas */
     gap: 10px;
     /* Espacio entre cartas */
-    border: 2px solid black;
 }
 /* 1. El contenedor 3D */
 .carts-container {
@@ -137,3 +136,27 @@
 .carts-container.voltear {
     transform: rotateY(180deg);
 }
+
+/* Quiz styles (ligeros) */
+.quiz-container {
+    width: 100%;
+    padding: 12px;
+    box-sizing: border-box;
+    text-align: center;
+    color: var(--secondary-color);
+}
+.quiz-question { margin-bottom: 20px; }
+.quiz-options { display: flex; flex-direction: column; gap: 8px; align-items: center; }
+.quiz-option { 
+    padding: 8px 12px; 
+    width: 400px;
+    border-radius: 8px; 
+    border: 2px solid #1f1f1f; 
+    background: var(--background-color); 
+    cursor: pointer; 
+    color: var(--secondary-color);
+    font-size: large;
+}
+.quiz-option.correct { background: #c8f7c5; border-color: #2e7d32; }
+.quiz-option.incorrect { background: #ffd6d6; border-color: #c62828; }
+.quiz-actions { display: flex; gap: 8px; justify-content: center; margin-top: 12px; }
