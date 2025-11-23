@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="minigames/style.css">
+    <script src="minigames/game.js"></script>
     <title>TAKAX | Welcome</title>
 </head>
 <body>
@@ -16,7 +18,7 @@
           </div>
           <ul>
             <li><a href="#mainheader">Inicio</a></li>
-            <li><a href="#features">Problema</a></li>
+            <li><a href="#problema">Problema</a></li>
             <li><a href="#caracteristicas">Soluciones</a></li>
             <li><a href="#benefits">Beneficios</a></li>
             <li><a href="#awareness">Impacto</a></li>
@@ -130,15 +132,23 @@
         <h2>Interactividad y Conocimiento</h2>
         <div class="act-box">
           <div class="box-i">
-            <div class="name-box">
+            <div class="name-box" id="quiz">
               <h3>Quiz sobre reciclaje</h3>
             </div>
           </div>
-          <div class="box-i">
+          <div class="box-i" id="memorama">
             <div class="name-box">
               <h3>Memorama temático</h3>
             </div>
           </div>
+        </div>
+      </div>
+      <!--Game zone-->
+      <div id="game" class="hidden">
+        <button id="close-game">Close</button>
+        <div id="tablero"></div>
+        <div id="splash-screen" class="hidden">
+          <h2 id="splash-message"></h2>
         </div>
       </div>
     </section>

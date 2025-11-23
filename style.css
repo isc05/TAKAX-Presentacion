@@ -330,17 +330,21 @@ form #message{
     background-size: cover;
     width: 300px;
     height: 300px;
+    transition: all 0.3s ease;
 }
 
 .box-i:first-child{
-    background-image: url("/img/Quiz.png");
-
+    background-image: url("img/Quiz.png");
 }
 
 .box-i:nth-child(2){
-    background-image: url("/img/Memorama.png");
+    background-image: url("img/Memorama.png");
 }
-
+.box-i:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
 .name-box{
     width: 200px;
     height: auto;

@@ -1,0 +1,139 @@
+/* Hidden state: use opacity/visibility so transitions work */
+.hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* Game container with transition animation */
+#game{
+    width: 95%;
+    max-width: 900px;
+    height: 95%;
+    max-height: 700px;
+    border: 2px solid black;
+    border-radius: 20px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.98);
+    background-color: rgb(220, 220, 220);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 280ms ease, transform 280ms ease;
+}
+
+/* Visible/active state */
+#game.show{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+#close-game{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1100;
+    padding: 5px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid black;
+    border-radius: 10px;
+    font-weight: bold;
+}
+#close-game:hover{
+    color: var(--button-color);
+    border-color: var(--button-color);
+}
+#splash-screen{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(1, 1, 1, 0.5);
+    opacity: 0;
+    pointer-events: none;
+    display: block;
+}
+#splash-message{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+}
+#splash-screen.show{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transition: opacity 280ms ease;
+}
+/*ESTILOS DEL TABLERO Y CARTAS*/
+#tablero {
+    width: 90%;
+    /* Ancho flexible */
+    max-width: 670px;
+    /* Mantiene un máximo */
+    margin:auto;
+    display: flex;
+    /* La clave para la escalabilidad */
+    flex-wrap: wrap;
+    /* Permite que las cartas bajen de línea */
+    justify-content: center;
+    /* Centra las cartas */
+    gap: 10px;
+    /* Espacio entre cartas */
+    border: 2px solid black;
+}
+/* 1. El contenedor 3D */
+.carts-container {
+    width: 130px;
+    /* Tamaño de la carta : original (140 x 175)*/
+    height: 165px;
+    position: relative;
+    perspective: 1000px;
+    /* Efecto 3D */
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+/* 2. Estilo base para ambas caras */
+.carts-face {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Oculta la cara trasera del elemento */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Opcional: sombra */
+    object-fit: cover;
+    /* Asegura que la imagen cubra toda la cara */
+}
+
+/* 3. La cara frontal (la imagen del par) */
+.carts-front {
+    transform: rotateY(180deg);
+    /* Oculta por defecto */
+}
+
+/* 4. La cara trasera (la carta por defecto) */
+.carts-back {
+    /* No necesita rotación inicial */
+    background-color: #fff;
+    /* Fondo por si la img tarda en cargar */
+}
+
+/* 5. La animación de volteo */
+.carts-container.voltear {
+    transform: rotateY(180deg);
+}
