@@ -12,6 +12,19 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!gameContainer) return;
         // Make visible (remove hidden) and then add show to trigger transition
         gameContainer.classList.remove('hidden');
+        // Deshabilitar el scroll durante el juego
+        let scrollTop =
+            window.pageYOffset ||
+            document.documentElement.scrollTop;
+        let scrollLeft =
+            window.pageXOffset ||
+            document.documentElement.scrollLeft;
+
+        // if any scroll is attempted,
+        // set this to the previous value
+        window.onscroll = function () {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
         // Force reflow so transitions apply when adding class
         void gameContainer.offsetWidth;
         gameContainer.classList.add('show');
@@ -19,7 +32,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (gameType === 'memorama') {
             iniciarMemorama();
         }
-        if( gameType === 'quiz'){
+        if (gameType === 'quiz') {
             iniciarQuiz();
         }
     }
@@ -28,6 +41,8 @@ document.addEventListener("DOMContentLoaded", () => {
         // Remove show, wait for transition end, then hide (add hidden)
         gameContainer.classList.remove('show');
         splashScreen.classList.remove('show');
+        //habilitar el scroll cuando se cierra
+        window.onscroll = function () { };
         const onTransitionEnd = (e) => {
             if (e.propertyName === 'opacity') {
                 // Solo ocultar si el contenedor NO se volvió a mostrar durante la transición

@@ -1,20 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* RESET */
-:root{
+:root {
     --primary-color: #C0EBA6;
     --secondary-color: #16610E;
     --dark-color: #000;
-    --line-color: #093FB4;/*dark blue alternative #0a0b45*/
+    --line-color: #093FB4;
+    /*dark blue alternative #0a0b45*/
     --background-color: #E0F4FF;
-    --box-color:#BDE3F8;
-    --box-color2:#D4FFCF;
+    --box-color: #BDE3F8;
+    --box-color2: #D4FFCF;
     --seccion-interactiva: #B0D8EE;
     --button-color: #E5446D;
-    --hover-button:#e61146;
+    --hover-button: #e61146;
     --highlighter-color: #FF7832;
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -23,35 +25,37 @@
 /* MAIN STYLING */
 
 body,
-html{
+html {
     font-family: 'Montserrat', sans-serif;
     background-color: var(--background-color);
     scroll-behavior: smooth;
 }
 
-h1{
+h1 {
     font-size: 2.5rem;
 }
 
-h2{
+h2 {
     font-size: 2.5em;
     color: var(--secondary-color);
     text-align: center;
 }
 
-h3{
+h3 {
     font-size: 2em;
 }
 
-h4{
+h4 {
     font-size: 1.5rem;
     font-weight: 400;
     text-align: center;
 }
 
-ul{list-style: none;}
+ul {
+    list-style: none;
+}
 
-p{
+p {
     font-size: 1.4rem;
     margin: 10px 0;
     line-height: 1.7em;
@@ -59,16 +63,19 @@ p{
     font-weight: 500;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
 /* Utility classes */
-.container{
+.container {
     margin: auto;
     max-width: 1300px;
     overflow: auto;
     padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .large {
@@ -80,11 +87,11 @@ a{
     font-weight: 400;
 }
 
-.text-yellow{
+.text-yellow {
     color: var(--highlighter-color);
 }
 
-.btn{
+.btn {
     display: inline-block;
     font-size: 16px;
     padding: 12px 23px;
@@ -95,30 +102,30 @@ a{
     text-align: center;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--hover-button);
 }
 
-.btn-light{
+.btn-light {
     background: var(--button-color);
     color: var(--background-color);
     border: none;
 }
 
-.btn-100{
+.btn-100 {
     width: 100%;
 }
 
-form label{
+form label {
     display: inline-block;
     margin-bottom: 10px;
 }
 
-form .form-group{
+form .form-group {
     margin-bottom: 16px;
 }
 
-form .form-control{
+form .form-control {
     display: block;
     width: 100%;
     padding: 7px 12px;
@@ -129,99 +136,159 @@ form .form-control{
     border: 1px solid var(--secondary-color);
     border-radius: 4px;
 }
-form #message{
-    resize: none; /* fixed size*/
+
+form #message {
+    resize: none;
+    /* fixed size*/
 }
 
 /* Navbar */
 
-#navbar{
+#navbar {
     background: var(--secondary-color);
     color: var(--background-color);
     overflow: hidden;
     padding-top: 20px;
     padding-bottom: 20px;
-    height: 12vh;
+    height: fit-content;
     width: 100vw;
     position: fixed;
     z-index: 1000;
 }
-
-#navbar a{
+#navbar .container{
+    justify-content: space-between;
+}
+#navbar a {
     color: var(--background-color);
 }
 
-#navbar #logo .logo-takax{
+#navbar #logo .logo-takax {
     width: 65px;
     height: auto;
     float: left;
 }
-#navbar .logo{
+
+#navbar .logo {
     float: left;
     padding-top: 16px;
     font-size: 25px;
     text-transform: uppercase;
     font-weight: 300;
 }
-#navbar ul{
+
+#navbar ul {
     list-style: none;
-    float: right;
 }
-#navbar ul li{
+
+#navbar ul li {
     float: left;
 }
 
-#navbar ul li a{
+#navbar ul li a {
     display: block;
     padding: 20px;
     text-align: center;
 }
 
-/* Showcase */ 
-#showcase{
-    background: url(img/background-02.jpg) ;
+@media (max-width: 776px) {
+    #navbar ul {
+        display: flex;
+        width: 100%;
+        float: none;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    #navbar ul li a {
+        padding: 0.3rem;
+        font-size: clamp(0.5rem, 3vw, 1rem);
+    }
+
+    #navbar ul li {
+        max-width: 25%;
+    }
+}
+
+/* Showcase */
+#showcase {
+    background: url(img/background-02.jpg);
     /* background: linear-gradient(to right, #e000ea, #3b00ee); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 100vh;
-    color:var(--dark-color);
+    color: var(--dark-color);
     /* height: 88vh; */
-    padding-top: 170px;
+    padding-top: 25vh;
 }
 
-.showcase-title{
+#showcase .container {
+    justify-content: space-between;
+}
+
+.showcase-title {
     float: left;
     width: 50%;
     padding-right: 10px;
 }
 
-.showcase-title p{
+.showcase-title p {
     padding: 0px;
 }
 
-.showcase-img{
+.showcase-img {
     float: right;
     width: 50%;
     padding: 30px;
 
 }
-.showcase-img img{
+
+.showcase-img img {
     width: 100%;
 }
+@media (max-width: 1250px) {
+    .showcase-title {
+        width: 60%;
+    }
+
+    .showcase-title h1 {
+        font-size: 3rem;
+    }
+
+    .showcase-title p {
+        font-size: 1.5rem;
+    }
+    #showcase{
+        padding-top: 20vh;
+    }
+}
+@media (max-width: 850px) {
+    .showcase-title {
+        width: 100%;
+    }
+
+    .showcase-title h1 {
+        font-size: 2rem;
+    }
+
+    .showcase-title p {
+        font-size: medium;
+    }
+    #showcase{
+        padding-top: 30vh;
+    }
+}
+
+
 
 /*Problema*/
 
-#problema .container{
+#problema .container {
     padding: 60px 60px;
     max-width: 1150px;
 }
 
-#problema h2{
-    margin-bottom: 35px;
-}
-
-#problema p{
+#problema p {
     display: block;
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -230,12 +297,7 @@ form #message{
     unicode-bidi: isolate;
 }
 
-#problema .center-p{
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-#problema .box-p{
+#problema .box-p {
     background-color: var(--box-color2);
     border-radius: 30px;
     overflow: auto;
@@ -243,37 +305,59 @@ form #message{
     padding: 2em 4em;
 }
 
-/* Caracteristicas */
-
-#caracteristicas{
-    background-color:  var(--background-color);
-    text-align: center;
-}
-
-#caracteristicas .container{
-    padding: 20px 60px 60px 60px;
-}
-
-#caracteristicas #t-center{
-    text-align: center;
-}
-
-#caracteristicas h2{
-    margin-top: 0;
-}
-
-#caracteristicas p{
-    font-size: 1.2em;
+#problema .box-p p {
     text-align: left;
 }
 
-#caracteristicas .soluciones{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
+#problema .container .center-p {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.box-c{
+@media (max-width: 780px) {
+    #problema .container h2 {
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+    }
+
+    #problema .box-p p {
+        font-size: medium;
+    }
+}
+
+/* Caracteristicas */
+
+#caracteristicas {
+    background-color: var(--background-color);
+    text-align: center;
+}
+
+#caracteristicas p {
+    font-size: 1rem;
+    text-align: left;
+}
+
+#caracteristicas .container {
+    padding: 20px 30px 30px 60px;
+    width: 100%;
+}
+
+#caracteristicas #t-center {
+    text-align: center;
+}
+
+#caracteristicas h2 {
+    margin-top: 0;
+}
+
+#caracteristicas .soluciones {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.box-c {
     background-color: var(--box-color);
     border-radius: 30px;
     overflow: auto;
@@ -281,8 +365,22 @@ form #message{
     padding: 2em;
 }
 
-.box-c h3{
+.box-c h3 {
     color: var(--secondary-color);
+    font-size: 1.8rem;
+}
+
+@media (max-width: 780px) {
+
+    #caracteristicas h2,
+    .box-c h3 {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+    }
+
+    #caracteristicas p {
+        font-size: medium;
+    }
 }
 
 /* Features 
@@ -303,28 +401,29 @@ form #message{
 }*/
 
 /* Sección Interactiva */
-#interactivo{
+#interactivo {
     background: var(--seccion-interactiva);
     color: var(--background-color);
     text-align: center;
 }
 
-#interactivo .container{
+#interactivo .container {
     max-width: 1000px;
     padding: 50px 10px;
 }
 
-#interactivo h2{
+#interactivo h2 {
     margin-bottom: 50px;
 }
 
-#interactivo .act-box{
+#interactivo .act-box {
     display: grid;
     place-items: center;
     grid-template-columns: repeat(2, 1fr);
+    width: 100%;
 }
 
-.box-i{
+.box-i {
     display: grid;
     place-items: center;
     border-radius: 60px;
@@ -335,43 +434,54 @@ form #message{
     transition: all 0.3s ease;
 }
 
-.box-i:first-child{
+.box-i:first-child {
     background-image: url("img/Quiz.png");
 }
 
-.box-i:nth-child(2){
+.box-i:nth-child(2) {
     background-image: url("img/Memorama.png");
 }
-.box-i:hover{
+
+.box-i:hover {
     transform: scale(1.05);
     transition: transform 0.3s ease;
     cursor: pointer;
 }
-.name-box{
+
+.name-box {
     width: 200px;
     height: auto;
     border-radius: 10px;
     background-color: #000;
 }
 
-#testimonial p{
+#testimonial p {
     width: 70%;
     margin: 0 auto;
+}
+
+@media (max-width: 780px) {
+    #interactivo h2 {
+        font-size: 1.5rem;
+    }
 }
 
 /* Benefits Section */
 #benefits {
     padding: 70px 0;
     background-color: var(--white);
+    justify-content: center;
 }
 
-#benefits h4 {
+#benefits .container {
+    justify-content: center;
+}
+
+#benefits .container h4 {
     font-size: 2.5rem;
     color: var(--secondary-color);
     margin-bottom: 60px;
     font-weight: 700;
-    text-align: center;
-    text-transform: none;
 }
 
 .benefits-grid {
@@ -414,7 +524,7 @@ form #message{
     transform: translateX(-50%);
     width: 50px;
     height: 3px;
-    
+
 }
 
 .benefit-card ul {
@@ -454,12 +564,13 @@ form #message{
     .benefits-grid {
         grid-template-columns: 1fr;
     }
-    
+
     #benefits {
         padding: 60px 20px;
     }
+
     #benefits h4 {
-    font-size: 2rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -468,14 +579,16 @@ form #message{
     padding: 60px 0;
     background-color: var(--background-color);
     color: var(--secondary-color);
-   
+
 }
+
 #awareness .container {
-    padding: 0; 
-    max-width: none; 
+    padding: 0;
+    max-width: none;
 }
+
 .awareness-content {
-    
+
     text-align: center;
 }
 
@@ -489,7 +602,7 @@ form #message{
 }
 
 .awareness-title .text-highlight {
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
     font-weight: 700;
     margin-top: 10px;
 }
@@ -501,9 +614,9 @@ form #message{
     box-sizing: border-box;
     box-shadow: 0 10px 30px rgba(0, 0, 0, .5);
     border-radius: 3px;
-    border: 1px solid rgba(255, 255, 255, 0.3); 
-    
-    
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+
 }
 
 .awareness-text p {
@@ -521,23 +634,24 @@ form #message{
     #awareness {
         padding: 50px 0px;
     }
-    
+
     .awareness-title {
         font-size: 2rem;
         padding: 0 15px;
     }
-    
+
     .awareness-text {
         text-align: left;
         padding: 30px 30px;
-    
+
     }
-    
+
     .awareness-text p {
         text-align: justify;
         font-size: 1.1rem;
     }
 }
+
 /* Sección Call to Action */
 #cta {
     padding: 80px 0;
@@ -624,22 +738,22 @@ form #message{
     #cta {
         padding: 60px 20px;
     }
-    
+
     .cta-title {
         font-size: 2.2rem;
     }
-    
+
     .cta-description {
         font-size: 1.2rem;
         margin-bottom: 40px;
     }
-    
+
     .cta-buttons {
         flex-direction: column;
         gap: 20px;
         align-items: center;
     }
-    
+
     .btn {
         padding: 16px 30px;
         font-size: 1.1rem;
@@ -647,86 +761,104 @@ form #message{
         max-width: 300px;
     }
 }
+
 /* contact */
 
 #contact {
-    padding: 90px 120px;
+    padding: 90px 5vw;
+}
+#contact h4{
+    width: 100%;
 }
 #contact form {
-    padding-top: 90px;
+    padding-top: 30px;
     width: 70%;
     margin: 0 auto;
 }
-
+@media(max-width: 780px){
+    #contact form{
+        width: 100%;
+    }
+    #contact form .btn{
+        max-width: none;
+    }
+}
 /* Footer */
 
 #mainfooter {
-  background: var(--secondary-color);
-  color: var(--background-color);
-  padding: 50px 0 20px 0;
+    background: var(--secondary-color);
+    color: var(--background-color);
+    padding: 50px 0 20px 0;
+    max-height: fit-content;
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
 }
-
+.footer-section.double{
+    display: flex;
+    min-width: 30vw;
+    justify-content: space-around;
+}
 .footer-section h3 {
-  font-size: 1.25rem;
-  font-weight: 500;
-  margin-bottom: 20px;
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 20px;
 }
 
 .footer-section ul {
-  list-style: none;
+    list-style: none;
 }
 
 .footer-section ul li a {
-  color: var(--background-color);
-  display: block;
-  margin-bottom: 10px;
-  transition: color 0.3s ease;
+    color: var(--background-color);
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
 }
 
 .footer-section ul li a:hover {
-  color: var(--highlighter-color);
+    color: var(--highlighter-color);
 }
 
 .social-links img {
-  width: 30px;
-  height: 30px;
-  margin-right: 15px;
-  filter: invert(1);
-  transition: transform 0.3s ease;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    filter: invert(1);
+    transition: transform 0.3s ease;
 }
 
 .social-links a:hover img {
-  transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .footer-section form input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  margin-bottom: 10px;
-  background-color: var(--background-color);
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    background-color: var(--background-color);
 }
 
 .footer-bottom {
-  text-align: center;
-  border-top: 1px solid var(--primary-color);
-  margin-top: 30px;
-  padding-top: 20px;
+    text-align: center;
+    border-top: 1px solid var(--primary-color);
+    margin-top: 30px;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.footer-bottom p{
+
+.footer-bottom p {
     width: max-content;
     display: inline-flex;
 }
+
 .vitadev-logo {
     display: inline-block;
     width: 40px;
@@ -735,78 +867,95 @@ form #message{
     background: url('img/VitaDevs-Logo.png') no-repeat center center;
     background-size: cover;
 }
+
 /* Responsive */
+@media (max-width: 900px){
+    .footer-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        text-align: center;
+    }
+        .footer-section p{
+        text-align: center;
+    }
+    .footer-section div{
+        max-width: 50%;
+    }
+    .footer-section .social-links{
+        max-width: 100%;
+    }
+}
+@media (max-width: 800px) {
 
-@media (max-width: 768px) {
+    h2 {
+        font-size: 2em;
+    }
 
-  h2{
-    font-size: 2em;
-  }
-  
-  h3{
-    font-size: 1.6em;
-  }
+    h3 {
+        font-size: 1.6em;
+    }
 
-    p{
-    font-size: 1.2em;
-  }
+    p {
+        font-size: 1.2em;
+    }
 
-  #problema .container{
-    padding: 60px 30px;
-    max-width: 1150px;
-  }
+    #problema .container {
+        padding: 60px 30px;
+        max-width: 1150px;
+    }
 
-  #problema .box-p{
-    margin: 0.3em;
-    padding: 2em 1.2em;
-  }
+    #problema .box-p {
+        margin: 0.3em;
+        padding: 2em 1.2em;
+    }
 
-  /*Sección interactiva-responsive*/
-  #interactivo .act-box{
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 30px;
-  }
+    /*Sección interactiva-responsive*/
+    #interactivo .act-box {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
 
-  #interactivo h3{
-    font-size: 2em;
-  }
+    #interactivo h3 {
+        font-size: 2em;
+    }
 
-  /*Footer*/
+    /*Footer*/
+    .footer-section:last-child {
+        margin-bottom: 0;
+    }
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+    .footer-section ul li {
+        display: inline-block;
+        margin: 0 10px;
+    }
 
-  .footer-section {
-    margin-bottom: 20px;
-  }
+    .footer-section .logo {
+        font-size: 1.5rem;
+    }
+    .footer-section p{
+        font-size: medium;
+    }
+    .footer-bottom{
+        justify-content: space-around;
+    }
+    .footer-bottom p{
+        font-size: medium;
+    }
+    .vitadev-logo{
+        margin: 0;
+    }
+    #caracteristicas .soluciones {
+        grid-template-columns: 1fr;
+    }
 
-  .footer-section:last-child {
-    margin-bottom: 0;
-  }
-
-  .footer-section ul li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  .footer-section .logo {
-    font-size: 2rem;
-  }
-
-  #caracteristicas .soluciones{
-    grid-template-columns: 1fr;
-  }
-  #caracteristicas .container{
-    padding: 20px 20px 60px 20px;
-  }
+    #caracteristicas .container {
+        padding: 20px 20px 60px 20px;
+    }
 }
 
-
-@media (min-width: 1200px) {
-    #caracteristicas .soluciones{
+@media (min-width: 1250px) {
+    #caracteristicas .soluciones {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
